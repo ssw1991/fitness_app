@@ -15,14 +15,7 @@ public class UserService {
     private UserRepository repo;
 
     private UserResponse genUserResponse(User user){
-        UserResponse response = new UserResponse();
-        response.setId(user.getId());
-        response.setFirstName(user.getFirstName());
-        response.setLastName(user.getLastName());
-        response.setPassword(user.getPassword());
-        response.setEmail(user.getEmail());
-        response.setCreatedAt(user.getCreatedAt());
-        response.setUpdatedAt(user.getUpdatedAt());
+        UserResponse response = new UserResponse(user);
         return response;
     }
 
